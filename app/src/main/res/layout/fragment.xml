@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4A4A4A">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/send_text"
+            android:layout_width="345dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:inputType="numberSigned" />
+
+        <ImageView
+            android:id="@+id/send_button"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginTop="200dp"
+            tools:srcCompat="@android:drawable/ic_menu_send" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/received_text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:freezesText="true"
+        android:gravity="bottom"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/forward"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="260dp"
+        android:backgroundTint="#2196F3"
+        android:text="Up"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/left"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="324dp"
+        android:backgroundTint="#2196F3"
+        android:text="Left"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/right"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="108dp"
+        android:backgroundTint="#2196F3"
+        android:text="Right"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/down"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="392dp"
+        android:backgroundTint="#2196F3"
+        android:text="Down"
+        android:textSize="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/speed_text"-->
+    <!--        android:layout_width="72dp"-->
+    <!--        android:layout_height="25dp"-->
+    <!--        android:layout_marginBottom="240dp"-->
+    <!--        android:text="Speed"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textSize="18dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.498"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <SeekBar-->
+    <!--        android:id="@+id/carSpeed"-->
+    <!--        android:layout_width="249dp"-->
+    <!--        android:layout_height="16dp"-->
+    <!--        android:layout_marginBottom="216dp"-->
+    <!--        android:max="255"-->
+    <!--        android:thumbTint="#2196F3"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/servo"-->
+    <!--        android:layout_width="76dp"-->
+    <!--        android:layout_height="53dp"-->
+    <!--        android:layout_marginStart="80dp"-->
+    <!--        android:layout_marginBottom="148dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:srcCompat="@android:drawable/ic_menu_rotate" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/ir"-->
+    <!--        android:layout_width="76dp"-->
+    <!--        android:layout_height="53dp"-->
+    <!--        android:layout_marginStart="168dp"-->
+    <!--        android:layout_marginBottom="148dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:srcCompat="@android:drawable/ic_menu_upload" />-->
+
+    <!--    <ImageButton-->
+    <!--        android:id="@+id/ultrasonic"-->
+    <!--        android:layout_width="76dp"-->
+    <!--        android:layout_height="53dp"-->
+    <!--        android:layout_marginEnd="80dp"-->
+    <!--        android:layout_marginBottom="148dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/servo_text"-->
+    <!--        android:layout_width="76dp"-->
+    <!--        android:layout_height="19dp"-->
+    <!--        android:layout_marginStart="80dp"-->
+    <!--        android:layout_marginBottom="128dp"-->
+    <!--        android:text="Servo"-->
+    <!--        android:textAlignment="center"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/ir_text"-->
+    <!--        android:layout_width="76dp"-->
+    <!--        android:layout_height="19dp"-->
+    <!--        android:layout_marginStart="168dp"-->
+    <!--        android:layout_marginBottom="128dp"-->
+    <!--        android:text="IR"-->
+    <!--        android:textAlignment="center"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/ultrasonic_text"-->
+    <!--        android:layout_width="76dp"-->
+    <!--        android:layout_height="19dp"-->
+    <!--        android:layout_marginEnd="80dp"-->
+    <!--        android:layout_marginBottom="128dp"-->
+    <!--        android:text="Ultrasonic"-->
+    <!--        android:textAlignment="center"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <ImageButton
+        android:id="@+id/autonomus_mode"
+        android:layout_width="76dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="492dp"
+        android:backgroundTint="#2196F3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_power_off" />
+
+    <TextView
+        android:id="@+id/autonomus_mode_text"
+        android:layout_width="76dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="545dp"
+        android:text="Autonomus \n mode"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
