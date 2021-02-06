@@ -302,6 +302,10 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
                 pendingNewline = msg[msg.length - 1] == '\r'
             }
             receiveText!!.append(TextUtil.toCaretString(msg, newline.length != 0))
+            if ("Dystans:" in msg) {
+                System.out.println("hello its working")
+                System.out.println(msg)
+            }
         }
     }
 
