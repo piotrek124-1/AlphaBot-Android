@@ -183,7 +183,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
             }
             false
         }
-        stop.setOnClickListener{send("02 02 00 03")}
+        stop.setOnClickListener { send("02 02 00 03") }
         avoidance.setOnClickListener { avoidance(check) }
         return view
     }
