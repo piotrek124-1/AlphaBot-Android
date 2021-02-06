@@ -24,6 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -161,6 +162,25 @@ public class TerminalFragment extends Fragment implements ServiceConnection, com
         Button left = view.findViewById(R.id.left);
         Button right = view.findViewById(R.id.right);
         ImageButton am = view.findViewById(R.id.autonomus_mode);
+        SeekBar speed = view.findViewById(R.id.seekBar);
+        speed.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            Integer speed;
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                speed = progress;
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                String progressHex = "02 01 ";
+                progressHex += Integer.toHexString(speed);
+                progressHex += " 03";
+                send(progressHex);
+            }
+        });
         up.setOnTouchListener((v, event) -> {
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
                 send("02 0A C8 03");
