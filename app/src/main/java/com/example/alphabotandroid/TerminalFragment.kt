@@ -53,6 +53,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
     private var pendingNewline = false
     private var newline = TextUtil.newline_crlf
     private var lastOutput: String? = null
+    private var distance: TextView? = null
 
     /*
      * Lifecycle
@@ -291,6 +292,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
         } else {
             var msg = String(data)
             lastOutput = msg
+
             if (newline == TextUtil.newline_crlf && msg.length > 0) {
                 // don't show CR as ^M if directly before LF
                 msg = msg.replace(TextUtil.newline_crlf, TextUtil.newline_lf)
@@ -302,10 +304,6 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
                 pendingNewline = msg[msg.length - 1] == '\r'
             }
             receiveText!!.append(TextUtil.toCaretString(msg, newline.length != 0))
-            if ("Dystans:" in msg) {
-                System.out.println("hello its working")
-                System.out.println(msg)
-            }
         }
     }
 
