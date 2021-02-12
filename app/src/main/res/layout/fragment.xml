@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#4A4A4A">
+    android:background="#8C8C8C">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -211,8 +211,8 @@
         android:layout_marginStart="172dp"
         android:layout_marginTop="545dp"
         android:text="Obstacle \n avoidance"
-        android:textColor="@color/white"
         android:textAlignment="center"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

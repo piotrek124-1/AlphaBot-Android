@@ -10,8 +10,6 @@ class MainActivity : AppCompatActivity(), FragmentManager.OnBackStackChangedList
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
-//        setSupportActionBar(toolbar)
         supportFragmentManager.addOnBackStackChangedListener(this)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction().add(R.id.fragment, DevicesFragment(), "divices").commit()
