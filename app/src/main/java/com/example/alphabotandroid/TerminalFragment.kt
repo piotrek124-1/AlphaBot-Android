@@ -154,7 +154,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
         })
         up.setOnTouchListener { v: View?, event: MotionEvent ->
             if (event.action == MotionEvent.ACTION_DOWN) {
-                send("02 0A C8 03")
+                send("02 0A 00 03")
             } else if (event.action == MotionEvent.ACTION_UP) {
                 send("02 01 00 03")
             }
@@ -162,7 +162,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
         }
         down.setOnTouchListener { v: View?, event: MotionEvent ->
             if (event.action == MotionEvent.ACTION_DOWN) {
-                send("02 0D C8 03")
+                send("02 0D 00 03")
             } else if (event.action == MotionEvent.ACTION_UP) {
                 send("02 01 00 03")
             }
@@ -170,7 +170,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
         }
         left.setOnTouchListener { v: View?, event: MotionEvent ->
             if (event.action == MotionEvent.ACTION_DOWN) {
-                send("02 0B C8 03")
+                send("02 0B 00 03")
             } else if (event.action == MotionEvent.ACTION_UP) {
                 send("02 01 00 03")
             }
@@ -178,7 +178,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
         }
         right.setOnTouchListener { v: View?, event: MotionEvent ->
             if (event.action == MotionEvent.ACTION_DOWN) {
-                send("02 0C C8 03")
+                send("02 0C 00 03")
             } else if (event.action == MotionEvent.ACTION_UP) {
                 send("02 01 00 03")
             }
