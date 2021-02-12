@@ -146,7 +146,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
 
             }
             override fun onStopTrackingTouch(seekBar: SeekBar) {
-                var progressHex = "02 01 "
+                var progressHex = "02 02 "
                 progressHex += Integer.toHexString(seekBar.progress)
                 progressHex += " 03"
                 send(progressHex)
@@ -184,7 +184,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
             }
             false
         }
-        stop.setOnClickListener { send("02 02 00 03") }
+        stop.setOnClickListener { send("02 01 00 03") }
         avoidance.setOnClickListener { avoidance(check) }
         return view
     }
