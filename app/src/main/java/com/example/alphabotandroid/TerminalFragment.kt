@@ -53,7 +53,6 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
     private var pendingNewline = false
     private var newline = TextUtil.newline_crlf
     private var lastOutput: String? = null
-    private var distance: TextView? = null
 
     /*
      * Lifecycle
@@ -282,7 +281,6 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
             onSerialIoError(e)
         }
     }
-
     private fun receive(data: ByteArray) {
         if (!hexEnabled) {
             receiveText!!.append("""
@@ -306,7 +304,6 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
             receiveText!!.append(TextUtil.toCaretString(msg, newline.length != 0))
         }
     }
-
     private fun status(str: String) {
         val spn = SpannableStringBuilder("""
     $str
