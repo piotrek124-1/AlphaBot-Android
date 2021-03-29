@@ -3,5 +3,5 @@ Android app based on https://github.com/kai-morich/SimpleBluetoothLeTerminal for
 # Features
 * Driving forwards and backwards
 * Turning to the left and right
-* Measuring distance using an ultrasonic sensor
+* Display of the distance in front of the AlphaBot using an ultrasonic sensor
 * Speed regulation (because differential drive tends to change direction undesirable)
