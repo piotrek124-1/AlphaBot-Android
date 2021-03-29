@@ -4,4 +4,4 @@ Android app based on https://github.com/kai-morich/SimpleBluetoothLeTerminal for
 * Driving forward and backward 
 * Rotating left and right
 * Mearuring distance using ultrasonic sensor
-* Speed regulation
+* Speed regulation (because differential drive tends to change direction undesirable)
