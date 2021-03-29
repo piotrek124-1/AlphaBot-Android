@@ -133,9 +133,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
         val down = view.findViewById<Button>(R.id.down)
         val left = view.findViewById<Button>(R.id.left)
         val right = view.findViewById<Button>(R.id.right)
-        val avoidance = view.findViewById<ImageButton>(R.id.autonomus_mode)
-        var speed = view.findViewById<SeekBar>(R.id.seekBar)
-        val check = view.findViewById<CheckBox>(R.id.checkBox)
+        val speed = view.findViewById<SeekBar>(R.id.seekBar)
         val stop = view.findViewById<ImageButton>(R.id.stopButton)
         speed.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
@@ -184,17 +182,7 @@ class TerminalFragment : Fragment(), ServiceConnection, SerialListener {
             false
         }
         stop.setOnClickListener { send("02 01 00 03") }
-        avoidance.setOnClickListener { avoidance(check) }
         return view
-    }
-
-    private fun avoidance(check: CheckBox) {
-        send("02 00 C8 03")
-        if (check.isChecked()) {
-            check.setChecked(false)
-        } else {
-            check.setChecked(true)
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
